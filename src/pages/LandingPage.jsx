@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import TickItLogo from '../assets/TickItLogo.svg';
 import Navbar from '../components/Navbar';
 import { useAuth } from '../context/AuthContext';
+import Mockup from '../assets/mockup.png'
+import Feature from '../assets/feature.png'
 
 const features = [
     { smallTitle: "FEATURE 1", title: "Comprehensive Task Management", description: "Organize tasks with details, deadlines, and projects." },
@@ -63,8 +65,8 @@ function LandingPage() {
             </div>
 
             <div className="md:w-1/2 w-full">
-                 <div className="bg-gray-300 h-64 md:h-80 rounded-lg flex items-center justify-center text-gray-600 text-center">
-                     [Placeholder Gambar Mockup Aplikasi]
+                 <div className=" rounded-lg shadow-xl flex items-center justify-center ">
+                 <img src={Mockup} alt="mockup" className="h-full" />
                  </div>
             </div>
         </section>
@@ -88,8 +90,8 @@ function LandingPage() {
               </div>
 
               <div className={`md:w-1/2 w-full flex justify-center items-center`}>
-                 <div className="w-full h-64 md:h-[500px] bg-gray-300 rounded-lg shadow-xl flex items-center justify-center text-gray-600 text-center">
-                     [Placeholder Video Demo TickIt]
+                 <div className="w-full h-64 md:h-[500px] rounded-lg shadow-xl flex items-center justify-center">
+                 <img src={Feature} alt="feature" className="h-full" />
                  </div>
               </div>
              </div>
@@ -106,7 +108,7 @@ function LandingPage() {
                   A task manager you can trust for life
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  We've been building TickIt for [Jumlah Tahun] years and [Jumlah Hari] days. Rest assured that we'll never sell out to the highest bidder.
+                  We've been building TickIt for 99999 years and 9999 days. Rest assured that we'll never sell out to the highest bidder.
                 </p>
                 <a href="#" className="text-tickitGreen-500 hover:underline font-semibold">
                   Read about our long-term mission &rarr;
@@ -114,13 +116,6 @@ function LandingPage() {
               </div>
 
               <div className="md:w-1/2 w-full overflow-x-auto">
-                <div className="flex space-x-4 pb-4">
-                   {sliderImages.map((_, index) => (
-                     <div key={index} className="flex-shrink-0 w-64 md:w-80 h-48 md:h-64 bg-gray-300 rounded-lg shadow-md flex items-center justify-center text-gray-600 text-center">
-                         [Gambar Slider {index + 1}]
-                     </div>
-                   ))}
-                </div>
               </div>
             </div>
 
@@ -179,28 +174,14 @@ function LandingPage() {
                      {footerLinks.company.map((link, index) => (
                      <li key={index} className="mb-2 last:mb-0 flex items-center justify-center md:justify-start">
                        <a href={link.href} className="hover:underline">{link.text}</a>
-                        {link.text === 'Careers' && (
-                            <span className="ml-2 bg-tickitGreen-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                                Hiring
-                            </span>
-                        )}
                      </li>
                    ))}
                  </ul>
                </div>
-                <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center md:items-start">
-                 <h4 className="font-bold text-gray-800 mb-4 hidden md:block">Follow Us</h4>
-                 <div className="flex space-x-4 text-gray-600 text-2xl">
-                    <a href="#" aria-label="Twitter" className="hover:text-gray-900">T</a>
-                    <a href="#" aria-label="YouTube" className="hover:text-gray-900">Y</a>
-                    <a href="#" aria-label="Facebook" className="hover:text-gray-900">F</a>
-                    <a href="#" aria-label="Instagram" className="hover:text-gray-900">I</a>
-                 </div>
-               </div>
              </div>
              <hr className="border-gray-300 mb-8" />
              <div className="text-center text-sm text-gray-600">
-               &copy; {new Date().getFullYear()} TickIt. All rights reserved.
+               &copy; 2025 TickIt by NelsonLaurensius_2306161845. All rights reserved.
              </div>
            </div>
          </footer>

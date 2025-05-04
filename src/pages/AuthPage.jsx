@@ -1,10 +1,10 @@
-// src/pages/AuthPage.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import TickItLogo from '../assets/TickItLogo.svg';
 import Navbar from '../components/Navbar';
 import { useAuth } from '../context/AuthContext';
 import { useApiClient } from '../api/api';
+import Quote from '../assets/Quote.svg'
 
 function AuthPage({ type }) {
   const isLogin = type === 'login';
@@ -166,13 +166,13 @@ function AuthPage({ type }) {
          </div>
 
          <div className="hidden md:flex md:w-1/2 p-8 md:p-12 flex-col items-center justify-center">
-           <div className="w-full max-w-xs h-64 bg-blue-200 rounded-lg mb-8 flex items-center justify-center text-blue-800 text-center">
-             [Placeholder Ilustrasi]
+           <div className="w-full max-w-xs h-64rounded-lg flex items-center justify-center">
+           <img src={Quote} alt="Quote" className="h-full" />
            </div>
 
            <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md text-gray-700 text-center italic">
-             "Before TickIt, my to-do lists were scattered all around. Now, everything is in order and in one place."
-             <br /><span className="not-italic font-semibold">- Placeholder Name</span>
+             ""Whatever you want to do, do it now. There are only so many tomorrows.""
+             <br /><span className="not-italic font-semibold">- Michael Landon</span>
            </div>
          </div>
        </div>

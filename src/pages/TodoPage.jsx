@@ -434,7 +434,7 @@ function TodoPage() {
                             {stats.total > 0 ? (
                                 stats.pending === 0 ? (
                                      <div className="w-full h-48 bg-blue-200 rounded-md flex items-center justify-center text-blue-800 text-center text-lg font-semibold">
-                                         <img src={NoTask} alt="No Task" className="h-8 mr-2" />
+                                         <img src={NoTask} alt="No Task" className="h-full" />
                                      </div>
                                 ) : (
                                      <p className="text-gray-600">Keep going! You still have tasks to tick off.</p>
