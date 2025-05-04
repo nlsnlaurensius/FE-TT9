@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TickItLogo from '../assets/TickItLogo.svg';
+import NoTask from '../assets/NoTask.svg';
 import { useApiClient } from '../api/api';
 import { useAuth } from '../context/AuthContext';
 
@@ -433,7 +434,7 @@ function TodoPage() {
                             {stats.total > 0 ? (
                                 stats.pending === 0 ? (
                                      <div className="w-full h-48 bg-blue-200 rounded-md flex items-center justify-center text-blue-800 text-center text-lg font-semibold">
-                                         [Placeholder Ilustrasi Semua Tugas Selesai]
+                                         <img src={NoTask} alt="No Task" className="h-8 mr-2" />
                                      </div>
                                 ) : (
                                      <p className="text-gray-600">Keep going! You still have tasks to tick off.</p>
